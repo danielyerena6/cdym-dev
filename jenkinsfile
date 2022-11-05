@@ -3,7 +3,12 @@ pipeline {
     stages {
         stage('Stage 1') {
             steps {
-                docker-compose -f pg-compose.yaml
+                echo "Bulding .............."
+            }
+        },
+        stage('Stage 2') {
+            steps {
+                docker-compose -f pg-compose.yaml up -d
             }
         }
     }
