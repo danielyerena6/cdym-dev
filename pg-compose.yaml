@@ -7,9 +7,9 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_PASSWORD: django
+      POSTGRES_PASSWORD: example
     ports:
-      - 4090:5432
+      - 5432:5432
 
   adminer:
     image: adminer
